@@ -1,0 +1,45 @@
+@use '../../styles/variables' as v;
+
+.main__container {
+  .cgv__cgu__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    color: v.$ghostwhite-color;
+    background-color: v.$background-gradient;
+    border-radius: 0.5rem;
+
+    h2,
+    h3 {
+      letter-spacing: v.$letter-spacing;
+      font-family: v.$h2-font-family;
+      color: v.$third-color;
+    }
+
+    h4 {
+      color: v.$third-color;
+      font-family: v.$h4-font-family;
+    }
+
+    a {
+      color: v.$ghostwhite-color;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    p {
+      font-family: v.$p-font-family;
+    }
+
+    .research__ordering {
+      li {
+        font-family: v.$p-font-family;
+        font-style: italic;
+      }
+    }
+  }
+}

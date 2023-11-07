@@ -1,0 +1,39 @@
+@use '../../styles/variables' as v;
+
+.main__container {
+  .legal__notices__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    color: v.$ghostwhite-color;
+    background-color: v.$background-gradient;
+    border-radius: 0.5rem;
+
+    h2,
+    h3,
+    h4 {
+      letter-spacing: 0.2rem;
+      color: v.$third-color;
+    }
+
+    h4 {
+      font-family: v.$h4-font-family;
+    }
+    a {
+      color: v.$ghostwhite-color;
+    }
+
+    p {
+      font-family: v.$p-font-family;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        font-family: v.$p-font-family;
+      }
+    }
+  }
+}

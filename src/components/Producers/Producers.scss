@@ -1,0 +1,74 @@
+// == Mixin == //
+@mixin input_searchBar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  color: white;
+}
+@mixin input_searchBar_style {
+  width: 11rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  .header__searchBar__producer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #00497d;
+    form {
+      display: flex;
+      .input__geo__producer {
+        @include input_searchBar;
+        border-radius: 15px 0 0 15px;
+        margin-right: 0.2rem;
+        padding-left: 0.3rem;
+        input {
+          @include input_searchBar_style;
+        }
+      }
+      .input__search__producer {
+        @include input_searchBar;
+        border-radius: 0 15px 15px 0;
+        padding-right: 0.3rem;
+        input {
+          @include input_searchBar_style;
+        }
+      }
+    }
+  }
+  .cards__producers {
+    padding: 2rem 0rem 4rem;
+  }
+  h1 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    .header__searchBar__producer form {
+      .input__geo__producer, .input__search__producer {
+        input {
+          width: 8rem;
+        }
+        input::placeholder {
+          font-size: 0.6rem;
+        }
+      } 
+    }   
+  } 
+}
+
+@media (min-width: 768px) {
+  main {
+    .cards__producers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

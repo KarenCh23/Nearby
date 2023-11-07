@@ -1,0 +1,48 @@
+@use '../../styles/variables' as v;
+
+// == Mixin == //
+@mixin input_searchBar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  color: white;
+}
+@mixin input_searchBar_style {
+  width: 11rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  .header__searchBar__product {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: v.$main-color;
+    form {
+      display: flex;
+      .input__geo__product {
+        @include input_searchBar;
+        border-radius: 15px 0 0 15px;
+        margin-right: 0.2rem;
+        padding-left: 0.3rem;
+        input {
+          @include input_searchBar_style;
+        }
+      }
+      .input__search__product {
+        @include input_searchBar;
+        border-radius: 0 15px 15px 0;
+        padding-right: 0.3rem;
+        input {
+          @include input_searchBar_style;
+        }
+      }
+    }
+  }
+  h1 {
+    padding: 1rem;
+  }
+}

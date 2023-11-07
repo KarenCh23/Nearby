@@ -1,0 +1,90 @@
+@use '../../styles/variables' as v;
+@import '../../styles/variables';
+
+.main__container {
+  color: rgb(235, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 80%;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-family: v.$h2-font-family;
+  font-weight: lighter;
+  .main__wrapper__about {
+    background: v.$background-gradient;
+    border-radius: 0.5rem;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      width: 50%;
+      h2 {
+        border-bottom: 0.1rem solid v.$third-color;
+        letter-spacing: 0.2rem;
+        color: v.$third-color;
+      }
+      p {
+        font-family: v.$p-font-family;
+        padding: 1rem;
+      }
+    }
+
+    img {
+      @include fade__in__animation;
+      border-radius: 1rem;
+      animation: fadeIn 1.5s;
+    }
+  }
+
+  #team {
+    .about__text {
+      order: 2;
+    }
+
+    .about__picture {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      order: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main__container article {
+    flex-direction: row;
+  }
+
+  .main__container article div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main__container {
+    padding-top: 1rem;
+  }
+
+  .main__container article div {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .main__container #team .about__picture {
+    width: 100%;
+  }
+}

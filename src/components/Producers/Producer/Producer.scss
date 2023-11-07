@@ -1,0 +1,87 @@
+@use '../../../styles/variables' as v;
+@import '../../../styles/variables';
+
+main {
+  .card__producer {
+    /*     margin: 0 10%; */
+    @include fade__in__animation;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-decoration: none;
+    .card__item__producer {
+      margin: 0.5rem;
+
+      span {
+        color: v.$third-color;
+        font-family: v.$h4-font-family;
+      }
+
+      p {
+        font-family: v.$p-font-family;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    .card__producer {
+      margin: 0 2%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      text-decoration: none;
+
+      .card__item__producer {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        width: 55%;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card__picture__producer {
+          order: -1;
+          width: 10rem;
+          height: 100%;
+        }
+        .card__content__producer {
+          display: none;
+        }
+        .card__avatar__producer {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 752px) {
+  main {
+    .card__producer {
+      .card__item__producer {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  main {
+    .card__producer {
+      .card__item__producer {
+        .card__picture__producer {
+          width: 7rem;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

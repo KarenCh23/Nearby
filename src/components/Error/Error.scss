@@ -1,0 +1,22 @@
+@use '../../styles/variables' as v;
+
+.main__section__error {
+  .error__section {
+    padding-top: 25vh;
+    height: 100vh;
+    .error__title {
+      font-size: 4rem;
+      color: v.$ghostwhite-color;
+    }
+    .error__icon {
+      font-size: 5rem;
+      margin: 2rem auto;
+      color: v.$third-color;
+    }
+    .error__message {
+      font-size: 1.2rem;
+      margin: 2rem auto;
+      color: v.$ghostwhite-color;
+    }
+  }
+}

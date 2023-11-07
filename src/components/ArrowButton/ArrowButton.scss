@@ -1,0 +1,95 @@
+@use '../../styles/variables' as v;
+@import '../../styles/variables';
+
+//  Button Animation Join-us / Contact-us //
+.join__us,
+.contact__us {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+
+  width: 17rem;
+  height: auto;
+
+  .circle {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: v.$main-color;
+    border-radius: 0.7rem;
+
+    .icon {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: v.$white;
+      &.arrow {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+        &::before {
+          position: absolute;
+          content: '';
+          top: -0.25rem;
+          right: 0.0625rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          border-top: 0.125rem solid #fff;
+          border-right: 0.125rem solid #fff;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .button__join__text,
+  .button__text {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0;
+    margin: 0 0 0 1.85rem;
+    color: v.$color;
+    font-family: v.$h4-font-family;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2rem;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: v.$white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button__join__text,
+    .button__text {
+      color: v.$second-color;
+    }
+  }
+}

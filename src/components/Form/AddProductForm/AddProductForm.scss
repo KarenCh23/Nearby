@@ -1,0 +1,302 @@
+@use '../../../styles/variables' as v;
+
+.main__container.product__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+  padding: 0rem 0rem 5rem;
+  font-family: 'Abril Fatface';
+  font-weight: lighter;
+
+  .add__form__title {
+    letter-spacing: v.$letter-spacing;
+    margin-bottom: 2rem;
+    color: v.$lighter-orange;
+  }
+  .add__product__form {
+    border-radius: 10px;
+    padding: 2.8rem;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0 0 5px 5px #00000020;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.69);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+
+    .form__card__wrapper {
+      display: flex;
+      gap: 15px;
+      border: none;
+      width: 100%;
+      padding: 0;
+
+      .form__card {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    .form__description__wrapper {
+      border: none;
+      padding: 0;
+      width: 100%;
+      height: 10rem;
+      .product__description {
+        height: 10rem;
+        ::placeholder {
+          color: #000;
+        }
+
+        .description {
+          height: 10rem;
+        }
+      }
+    }
+
+    .form__categories__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding: 2rem;
+      height: 50%;
+      width: 100%;
+
+      legend {
+        padding: 0 1rem;
+        color: v.$label-form-color;
+      }
+
+      .category__checkbox {
+        display: flex;
+        gap: 1rem;
+        width: 30%;
+
+        .category__name {
+          color: v.$label-form-color;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .form__input {
+      padding: 20px 25px 15px;
+      width: 100%;
+      height: 80%;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background: transparent;
+      outline: none;
+
+      font-family: v.$p-font-family;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+      box-sizing: border-box;
+
+      & :valid,
+      & :focus {
+        border: 1px solid #515151;
+      }
+
+      &:valid ~ .form__label,
+      &:focus ~ .form__label {
+        color: #515151;
+        top: 30%;
+        transform: translateY(-70%);
+        font-size: 13px;
+        line-height: 23px;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        transition: background-color 9999s ease-in-out 0s;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .form__label {
+      position: absolute;
+      left: 25px;
+      top: 40%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: 0.3s;
+      margin: 0;
+
+      font-family: v.$p-font-family;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 200;
+      color: v.$label-form-color;
+    }
+
+    .form__textarea {
+      padding: 20px 25px 15px;
+      width: 100%;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background: transparent;
+      outline: none;
+
+      font-family: v.$p-font-family;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      resize: none;
+      box-sizing: border-box;
+
+      &:valid,
+      &:focus {
+        border: 1px solid #515151;
+      }
+
+      &:valid ~ .form__textarea__label,
+      &:focus ~ .form__textarea__label {
+        color: #515151;
+        top: 18%;
+        transform: translateY(-82%);
+        font-size: 13px;
+        line-height: 23px;
+      }
+
+      // &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        transition: background-color 9999s ease-in-out 0s;
+      }
+    }
+    .form__textarea__label {
+      position: absolute;
+      left: 25px;
+      top: 30%;
+      transform: translateY(-70%);
+
+      font-family: v.$p-font-family;
+      pointer-events: none;
+      transition: 0.3s;
+      margin: 0;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .btn__wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 0 0;
+    }
+    .btn__wrap button {
+      padding: 0 32px;
+      font-size: 18px;
+      line-height: 48px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      box-shadow: 0 0 5px 5px #00000020;
+    }
+    .btn__wrap button:hover {
+      border: 1px solid #000;
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 958px) and (max-width: 1088px) {
+  .main__container .add__product__form {
+    width: 80%;
+
+    .form__input {
+      height: 80%;
+    }
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 957px) {
+  .form__input {
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 800px) {
+  .main__container.product__form.add__product__form {
+    width: 100%;
+
+    .form__card__wrapper {
+      flex-direction: column;
+    }
+
+    .ford__card.form__description__wrapper,
+    .form__card.product__description,
+    .form__textarea.form__input.description {
+      height: 8rem;
+    }
+
+    .form__categories__wrapper {
+      height: 30%;
+      gap: 0;
+      padding: 1rem;
+    }
+
+    .form__input {
+      height: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .main__container .add__product__form {
+    width: 100%;
+    height: 100%;
+
+    .form__card__wrapper {
+      flex-direction: column;
+    }
+
+    .ford__card.form__description__wrapper,
+    .form__card.product__description,
+    .form__textarea.form__input.description {
+      height: 8rem;
+    }
+
+    .form__categories__wrapper {
+      height: 50%;
+      gap: 0;
+      padding: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .category__checkbox {
+        margin: 0.5rem;
+      }
+    }
+
+    .form__input {
+      height: 80%;
+    }
+  }
+}

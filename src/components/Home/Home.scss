@@ -1,0 +1,314 @@
+@use '../../styles/variables' as v;
+@import '../../styles/variables';
+
+main {
+  background-attachment: fixed;
+  background-image: url('../../assets/img/background__image__5.jpg');
+  background-attachment: fixed;
+
+  h1 {
+    font-family: 'Abril Fatface';
+    letter-spacing: 0.2rem;
+    color: v.$color;
+    font-weight: lighter;
+  }
+
+  h2 {
+    font-family: 'Abril Fatface';
+    letter-spacing: 0.2rem;
+    color: rgb(0, 0, 0);
+  }
+  h4 {
+    font-family: 'Glacial Indifference';
+    font-weight: 100;
+  }
+  .main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 85vh;
+    margin: auto;
+    font-family: 'Glacial Indifference';
+
+    .nearby__title {
+      color: ghostwhite;
+    }
+
+    .nearby__slogan {
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 50px;
+    }
+
+    p,
+    h2 {
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      color: v.$color;
+    }
+
+    .search__producer__btn {
+      margin-top: 1rem;
+      border-radius: 1rem;
+      color: v.$color;
+      border: none;
+      background-color: v.$main-color;
+    }
+
+    form {
+      display: flex;
+      height: 2rem;
+      .input__geo__home {
+        @include input_home;
+        border-radius: 15px 0 0 15px;
+        margin-right: 0.2rem;
+        padding-left: 0.3rem;
+        input {
+          @include input_home_style;
+        }
+      }
+      .input__search__home {
+        @include input_home;
+        border-radius: 0 15px 15px 0;
+        padding-right: 0.3rem;
+        input {
+          @include input_home_style;
+        }
+      }
+    }
+  }
+  .main__content {
+    background-color: v.$color;
+    height: 100vh;
+    .main__responsive {
+      height: 70vh;
+      padding: 1rem;
+      .main__producer {
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        h2 {
+          margin-top: 1rem;
+        }
+        .right__arrow {
+          position: absolute;
+          top: 50%;
+          left: 30%;
+        }
+        .left__arrow {
+          position: absolute;
+          top: 50%;
+          right: 100%;
+        }
+
+        .slide {
+          opacity: 0;
+          position: absolute;
+          transition-duration: 1s ease;
+        }
+
+        .slide.active {
+          justify-content: center;
+          display: flex;
+          flex-direction: row;
+          opacity: 1;
+          transition-duration: 1s;
+          transform: scale(1.08);
+          align-items: center;
+          margin: 1rem;
+
+          .image__slider {
+            height: 30rem;
+            margin: 1rem;
+          }
+
+          .product__list {
+            display: flex;
+            width: 30rem;
+
+            .list__product_producer {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .product__list {
+      margin: 1rem;
+      width: 10rem;
+      .image__product {
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 0.5rem;
+      }
+      h4 {
+        background-color: v.$main-color;
+        color: white;
+        border-radius: 15px;
+      }
+    }
+    .main__new__product {
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .product__list__content {
+        display: flex;
+        justify-content: center;
+        .product__list {
+          height: 9.5rem;
+          width: 10.5rem;
+          margin: 0.3rem;
+        }
+        .image__product {
+          height: 100%;
+          width: 100%;
+          border-radius: 15px;
+          margin-bottom: 0.5rem;
+        }
+        h4 {
+          background-color: v.$main-color;
+          color: white;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+
+  // ? Animation Arrow Scroll ToSection //
+  .icon__scroll {
+    font-size: 3rem;
+    @include scroll__arrow__style;
+  }
+  .icon__scroll:hover {
+    @include scroll__arrow__style;
+
+    animation: none;
+    background: #fff;
+    color: #117cad;
+  }
+
+  // ? End-Animation Arrow Scroll ToSection //
+}
+
+@media (max-width: 861px) {
+  main {
+    .main__content {
+      margin-bottom: 15rem;
+      .main__responsive {
+        .main__producer {
+          .slide.active {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            opacity: 1;
+            transition-duration: 1s;
+            transform: scale(1.08);
+            align-items: center;
+            margin: 1rem;
+            .left__arrow {
+              top: 40%;
+              right: 75%;
+            }
+            .right__arrow {
+              top: 40%;
+              left: 75%;
+            }
+          }
+        }
+      }
+      .main__new__product {
+        height: 85vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  main {
+    .main__header {
+      form {
+        .input__geo__home,
+        .input__search__home {
+          input {
+            width: 7rem;
+          }
+          input::placeholder {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+    .main__content {
+      .main__responsive {
+        .main__producer {
+          .slide.active {
+            .right__arrow {
+              left: 85%;
+            }
+            .left__arrow {
+              right: 85%;
+            }
+            .product__list {
+              justify-content: space-evenly;
+              width: 100%;
+              .list__product_producer {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                .image__product {
+                  height: 5rem;
+                  width: 5rem;
+                }
+                h4 {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .main__new__product {
+        width: 100vw;
+        .product__list__content {
+          justify-content: space-evenly;
+          .product__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h4 {
+              width: 75%;
+            }
+            .image__product {
+              height: 5rem;
+              width: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    .main__header {
+      form {
+        .input__geo__home,
+        .input__search__home {
+          input {
+            width: 5rem;
+          }
+          input::placeholder {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}

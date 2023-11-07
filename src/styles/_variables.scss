@@ -1,0 +1,146 @@
+$color: #fff;
+$color-primary: #7b212800;
+$color-secondary: #217b67;
+$color-bg: #282c34;
+
+// Main colors on all site / all pages //
+$main-color: #00497d;
+$second-color: #e7f2fb;
+$third-color: #ec8b3c;
+$lighter-orange: #ffbd41;
+$ghostwhite-color: ghostwhite;
+$background-gradient: rgba(23, 34, 129, 0.575);
+$label-form-color: rgb(28 25 25);
+
+// == Fonts == //
+$h2-font-family: 'Abril Fatface';
+$h4-font-family: 'Abril Fatface';
+$h3-font-family: 'Abril Fatface';
+$p-font-family: 'Trocchi';
+$letter-spacing: 0.2rem;
+
+// profile-picture dimensions //
+
+$picture-height: 1rem;
+$picture-width: 1rem;
+
+// button contact-us FAQ + Join Us  //
+$bg: #f3f8fa;
+$white: #fff;
+$black: #292727;
+
+// === MIXINS === //
+
+// Mixin Fade In //
+@mixin fade__in__animation {
+  animation: fadeIn 0.7s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// Mixin Input Home //
+@mixin input_home {
+  display: flex;
+  align-items: center;
+  background: v.$color;
+  color: white;
+}
+
+// Mixin Input Home Style //
+@mixin input_home_style {
+  width: 11rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+// Mixin Scroll Arrow Style //
+@mixin scroll__arrow__style {
+  background-color: #093f61;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .icon__scroll:hover {
+    animation: none;
+    background: #fff;
+    color: #117cad;
+  }
+  @keyframes movebtn {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(18px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+//  Mixin Button Join-us / Contact-us //
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}

@@ -1,0 +1,57 @@
+@use '../../styles/variables' as v;
+
+.main__container__faq {
+  width: 80%;
+  height: 66rem;
+  margin: auto;
+  padding-top: 5rem;
+  overflow: auto;
+
+  .faq__wrapper {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+
+    h2,
+    h3 {
+      letter-spacing: 0.2rem;
+      font-family: v.$h2-font-family;
+      color: v.$lighter-orange;
+    }
+
+    .faq__notfound__question {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      h3 {
+        font-family: v.$h3-font-family;
+        letter-spacing: v.$letter-spacing;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .faq__wrapper {
+      padding: 0;
+
+      .faqs {
+        padding: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 335px) {
+    .faq__notfound__question {
+      .contact__us {
+        width: 13rem;
+      }
+    }
+  }
+}

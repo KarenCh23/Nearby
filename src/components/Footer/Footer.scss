@@ -1,0 +1,84 @@
+@use '../../styles/variables' as v;
+@import '../Home/Home.scss';
+
+footer {
+  background-color: v.$main-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .logo {
+    height: 10rem;
+    color: white;
+    margin: 1rem;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+      font-family: v.$h2-font-family;
+      letter-spacing: 0.2rem;
+
+      .footer__link {
+        margin: 1rem;
+        color: whitesmoke;
+        margin: 0;
+        padding: 0.5rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+  // ? FadeIn scroll To Top animation //
+
+  //  Arrow scroll to Top //
+  .icon__scroll {
+    @include scroll__arrow__style;
+    position: relative;
+
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+  }
+  .icon__scroll {
+    @include scroll__arrow__style;
+  }
+
+  .icon__scroll:hover {
+    animation: none;
+    background: #fff;
+    color: #117cad;
+  }
+
+  .icon__position {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 20;
+  }
+
+  //  End - Arrow scroll to Top //
+  // ? End- FadeIn scroll To Top animation //
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    nav {
+      ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

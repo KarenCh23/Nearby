@@ -1,0 +1,74 @@
+@use '../../../styles/variables' as v;
+
+.faqs {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem;
+  height: calc(100% - 5px);
+  .faq {
+    margin: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 8px -4px rgb(43 43 43);
+  }
+
+  .faq-question {
+    position: relative;
+    font-size: 1.2rem;
+    padding-right: 3rem;
+    transition: all 0.7s ease;
+    h4 {
+      font-family: v.$h4-font-family;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .faq-question::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(206 225 255);
+    box-shadow: 1px 2px 2px 1px #8f8a8a;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.2s ease;
+    font-family: v.$p-font-family;
+    font-size: 1rem;
+  }
+
+  .faq.open .faq-question {
+    margin-bottom: 1rem;
+  }
+  .faq.open .faq-question::after {
+    content: '\25B3';
+  }
+
+  .faq.open .faq-answer {
+    max-height: 63rem;
+    opacity: 1;
+  }
+}
+.faq__notfound__question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  h3 {
+    font-family: v.$h3-font-family;
+    letter-spacing: v.$letter-spacing;
+  }
+}
