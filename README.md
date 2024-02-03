@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left">Nearby is a website to promote local producers to consumers.  The site is a tool for promoting local production while offering users a close relationship with regional producers. By offering a platform of visibility to local producers, Nearby enables us to offer users another way of consuming, by making them players in their region's economy through their purchases.</p>
+<p align="left">Nearby is a website to promote local producers to consumers.  The site is a tool for promoting local production while offering users a close relationship with regional producers. By being a platform of visibility to local producers, Nearby enables us to offer users another way of consuming, where they can have a positive impact in their region's economy through their purchases.</p>
 
 ###
 
