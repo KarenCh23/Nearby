@@ -1,3 +1,9 @@
+<div align="center">
+  <img height="200" src="src/assets/img/nearby__blue__logo.png"  />
+</div>
+
+###
+
 <h1 align="left">What's about ?</h1>
 
 ###
@@ -99,5 +105,9 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" height="40" alt="google logo"  />
 </div>
+
+###
+
+<h2 align="left">Screenshots</h2>
 
 ###
