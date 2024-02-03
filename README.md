@@ -16,7 +16,7 @@
 
 ###
 
-<p align="left">We had a 30-day challenge to develop and deploy this website from scratch. With a team of five developers, we imagined the concept, determined the target users, and designed every step from wireframes and specifications to site development and deployment.</p>
+<p align="left">We had a 30-days challenge to develop and deploy this website from scratch. With a team of five developers, we imagined the concept, determined the target users, and designed every step from wireframes and specifications to site development and deployment.</p>
 
 ###
 
@@ -105,9 +105,3 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" height="40" alt="google logo"  />
 </div>
-
-###
-
-<h2 align="left">Screenshots</h2>
-
-###
